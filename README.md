@@ -13,4 +13,4 @@ Unlock-Flying 解锁飞行限制
 
 - 貝爾亞克 城堡
 
-![screenshot](https://github.com/zc149352394/Unlock-Flying/blob/master/screenshot/01.jpg)
+![screenshot](https://github.com/tera-mod/Unlock-Flying/blob/master/screenshot/01.jpg)
