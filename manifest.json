@@ -1,0 +1,10 @@
+{
+    "files": {
+        "index.js": "84396269c4cdbefe585a3c3d9868fe32724dd9222589f34fc07d6f2356de6ccb",
+        "module.json": "d39efbcb8081065533d5c19bec5326b484ca4c930f04de4c42b9083752b202c1"
+    },
+    "defs": {
+        "S_ABNORMALITY_BEGIN": 4,
+        "S_ABNORMALITY_END": 1
+    }
+}

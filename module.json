@@ -1,0 +1,12 @@
+{
+    "name": "Unlock-Flying",
+    "options": {
+        "niceName": "解锁飞行",
+        "guiName": "解锁飞行(Unlock-Flying)"
+    },
+    "author": "ZC",
+    "description": "空岛地图 移除飞行坐骑限制",
+    "servers": ["https://raw.githubusercontent.com/tera-mod/Unlock-Flying/master/"],
+    "supportUrl": "https://github.com/tera-mod/Unlock-Flying/issues",
+    "version": "86.06"
+}
