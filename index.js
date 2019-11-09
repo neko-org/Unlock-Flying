@@ -1,6 +1,19 @@
 module.exports = function UnlockFlying(mod) {
+	let unlock = false
+	
+	mod.hook('S_ABNORMALITY_BEGIN', 4, event => {
+		if (!mod.game.me.is(event.target)) return
+		if (event.id === 30010000) unlock = true
+	})
+		
+	mod.hook('S_ABNORMALITY_END', 1, event => {
+		if (!mod.game.me.is(event.target)) return
+		if (event.id === 30010000) unlock = false
+	})
+	
 	mod.game.me.on('change_zone', (zone, quick) => {
-		if (zone === 2000) {
+		if (zone === 2000 && !unlock) {
+			unlock = true
 			mod.send('S_ABNORMALITY_BEGIN', 4, {
 				target: mod.game.me.gameId,
 				source: mod.game.me.gameId,
@@ -8,11 +21,16 @@ module.exports = function UnlockFlying(mod) {
 				duration: 0x7FFFFFFF,
 				stacks: 1
 			})
-		} else {
+			// mod.command.message('成功')
+		}
+		
+		if (zone !== 2000 && unlock) {
+			unlock = false
 			mod.send('S_ABNORMALITY_END', 1, {
 				target: mod.game.me.gameId,
 				id: 30010000
 			})
+			// mod.command.message('恢复')
 		}
 	})
 }
